@@ -13,12 +13,13 @@ const default_config = {
         nested1: true,
         nested2: [1, 2, 3],
         nested3: {
-            foo: new Date()
-        }
-    }
+            foo: new Date(),
+        },
+    },
 };
-const config = new index_js_1.Weights(default_config);
-config.set({
-    param1: ''
+const weights = new index_js_1.Weights(default_config);
+weights.set({
+    param1: '',
 });
+console.log(weights.config.param2);
 //# sourceMappingURL=run.js.map

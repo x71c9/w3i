@@ -10,7 +10,7 @@ type DeepPartial<T> = {
 };
 export declare class Weights<T extends Record<string, any>> {
     private defaults;
-    private config;
+    config: T;
     constructor(defaults: T);
     set(params: DeepPartial<T>): void;
     private merge_defaults;

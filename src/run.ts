@@ -34,7 +34,9 @@ const default_config: Config = {
   },
 };
 
-const config = new Weights<Config>(default_config);
-config.set({
+const weights = new Weights<Config>(default_config);
+weights.set({
   param1: '',
 });
+
+console.log(weights.config.param2);

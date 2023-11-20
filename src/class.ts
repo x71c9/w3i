@@ -11,7 +11,7 @@ type DeepPartial<T> = {
 };
 
 export class Weights<T extends Record<string, any>> {
-  private config: T;
+  public config: T;
   constructor(private defaults: T) {
     this.config = _deep_clone(this.defaults);
   }
