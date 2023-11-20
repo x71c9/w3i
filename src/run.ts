@@ -4,29 +4,37 @@
  *
  */
 
-import i0n from './index.js';
-export const ion = i0n.create({});
+import {Weights} from './index.js';
 
-ion.trace(`trace`);
-ion.debug(`debug`);
-ion.info(`info`);
-ion.warn(`warn`);
-ion.error(`error`);
-ion.success(`success`);
-ion.fail(`fail`);
+type Nested3 = {
+  foo: any;
+};
 
-let text = `Loading`;
-for (let i = 0; i < 20; i++) {
-  text += ` ` + text;
-}
-ion.spinner.text(text);
-ion.spinner.start();
+type Param3 = {
+  nested1: boolean;
+  nested2: number[];
+  nested3: Nested3;
+};
 
-setTimeout(function () {
-  ion.warn('watch out');
-}, 2000);
+type Config = {
+  param1: string;
+  param2: number;
+  param3: Param3;
+};
 
-setTimeout(function () {
-  ion.spinner.stop();
-  ion.success('it is a success');
-}, 6000);
+const default_config: Config = {
+  param1: 'a',
+  param2: 1,
+  param3: {
+    nested1: true,
+    nested2: [1, 2, 3],
+    nested3: {
+      foo: new Date(),
+    },
+  },
+};
+
+const config = new Weights<Config>(default_config);
+config.set({
+  param1: '',
+});

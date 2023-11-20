@@ -5,5 +5,4 @@
  * @packageDocumentation
  *
  */
-
 export * from './main.js';
