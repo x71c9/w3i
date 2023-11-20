@@ -58,7 +58,7 @@ This repo try to follow the
 ## Name
 
 `w3i` stands for weight, like in
-[Atomic Weight](https://en.wikipedia.org/wiki/Standard_atomic_weight).
+[Atomic weight](https://en.wikipedia.org/wiki/Standard_atomic_weight).
 
 ## Other related repositories
 
