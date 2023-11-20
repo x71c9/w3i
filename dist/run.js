@@ -19,7 +19,7 @@ const default_config = {
 };
 const weights = new index_js_1.Weights(default_config);
 weights.set({
-    param1: '',
+    param1: 'A',
 });
-console.log(weights.config.param2);
+console.log(weights.params.param1, weights.params.param2);
 //# sourceMappingURL=run.js.map

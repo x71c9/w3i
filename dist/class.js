@@ -11,7 +11,7 @@ exports.Weights = void 0;
 class Weights {
     constructor(defaults) {
         this.defaults = defaults;
-        this.config = _deep_clone(this.defaults);
+        this.params = _deep_clone(this.defaults);
     }
     set(params) {
         if (!params ||
@@ -19,7 +19,7 @@ class Weights {
             Object.entries(params).length === 0) {
             return;
         }
-        this.merge_defaults(this.config, params);
+        this.merge_defaults(this.params, params);
     }
     merge_defaults(defaults, partial) {
         for (const key in partial) {

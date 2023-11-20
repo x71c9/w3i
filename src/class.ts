@@ -6,14 +6,14 @@
  *
  */
 
-type DeepPartial<T> = {
+export type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K];
 };
 
 export class Weights<T extends Record<string, any>> {
-  public config: T;
+  public params: T;
   constructor(private defaults: T) {
-    this.config = _deep_clone(this.defaults);
+    this.params = _deep_clone(this.defaults);
   }
   public set(params: DeepPartial<T>): void {
     if (
@@ -23,7 +23,7 @@ export class Weights<T extends Record<string, any>> {
     ) {
       return;
     }
-    this.merge_defaults(this.config, params);
+    this.merge_defaults(this.params, params);
   }
   private merge_defaults(defaults: T, partial: DeepPartial<T>) {
     for (const key in partial) {
