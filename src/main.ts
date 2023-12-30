@@ -6,4 +6,4 @@
  *
  */
 
-export * from './class.js';
+export * from './class';

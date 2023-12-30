@@ -4,7 +4,7 @@
  *
  */
 
-import {Weights} from './index.js';
+import {Weights} from './index';
 
 type Nested3 = {
   foo: any;

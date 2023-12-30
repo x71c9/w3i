@@ -5,7 +5,7 @@
  *
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_js_1 = require("./index.js");
+const index_1 = require("./index");
 const default_config = {
     param1: 'a',
     param2: 1,
@@ -17,7 +17,7 @@ const default_config = {
         },
     },
 };
-const weights = new index_js_1.Weights(default_config);
+const weights = new index_1.Weights(default_config);
 weights.set({
     param1: 'A',
 });
